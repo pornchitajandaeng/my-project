@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #0b0404;
+}
+
+.navbar {
+    background-color: rgb(22, 7, 36);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky !important;
+    opacity: 0.9;
+    top: 0;
+    /* line-height: 5rem; */
+}
+
+.left {
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 0px 20px;
+    /* padding: 10px; */
+}
+
+.checkBtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.checkBtn {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+    color: #ed1e79;
+    line-height: 80px;
+}
+
+.right ul {
+    display: flex;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+.right ul li a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.right ul li a:hover {
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(22, 7, 36);
+}
+
+.list {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(22, 7, 36);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 4rem;
+    left: 100%;
+    transition: all 1s;
+}
+
+#check {
+    display: none;
+}
+
+.checkBtn {
+    display: block;
+}
+
+#check:checked~ul {
+    left: 0%;
+}
+
+.img1 {
+    width: 100%;
+    height: auto;
+    padding: 0%;
+}
+
+.London {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.imgleft {
+    margin: 100px 100px;
+}
+
+h3 {
+    color: black;
+    align-content: center;
+}
+
+
+/*.animation {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: appear;
+    animation-range-start: entry 10%;
+    animation-fill-mode: both;
+    animation-duration: 4s;
+     animation-name: appear;
+    animation-duration: 4s; */
+
+
+/* Firefox requires this to apply the animation 
+
+
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}*/
+
+.animation {
+    view-timeline: --subjectReveal block;
+    animation-timeline: --subjectReveal;
+    animation-name: appear;
+    animation-range: entry 10% contain 25%;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+    /* Firefox requires this to apply the animation */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 190px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.wallpaper {
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/07/19/12/hotel-928937_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    filter: blur(1px);
+}
