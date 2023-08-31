@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-import MainPage  from './component/MainPage';
+import MainPage from './component/MainPage';
+import Home from './component/Home';
+import Login from './component/Login';
+import { Routes, Route } from 'react-router';
+
 
 
 
@@ -10,18 +14,17 @@ import MainPage  from './component/MainPage';
 
 
 function App() {
-  
-  
+
+
   return (
 
-<div className="App">
+    <div className="App">
 
-
-
-      { <MainPage /> }
-
-      
-      
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/Home" element={<Home />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
+      </Routes>
 
 
     </div>
